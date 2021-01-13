@@ -1,0 +1,50 @@
+.container .row{
+	background-color: #F9E79F;
+}
+.container .row .col-sm-6{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #E67E22;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+textarea{
+	height:200px;
+}
+input[type=submit] {
+  background-color: #D35400;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+label{
+	font-size:18px;
+	font-family:'Raleway', sans-serif;
+	color: #ffffff;
+}
+
+.contact-form{
+  border-radius: 5px;
+  background-color: #E67E22;
+  padding: 20px;
+}
+.contact-list h3,h4{
+	font-family:'Raleway', sans-serif;
+	font-weight: bold;
+	color: #E67E22;
+
+	}

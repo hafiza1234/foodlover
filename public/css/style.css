@@ -1,0 +1,646 @@
+.container-fluid-top {
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-bottom: 30px;
+}
+
+.container-fluid-middle {
+	margin-bottom: 30px;
+	margin-left: 30px;
+	margin-right: 15px;
+}
+
+.menu {
+	position: absolute;
+	right: 0;
+}
+
+.menu ul {
+	margin-top: 10px;
+	margin-right: 15px;
+}
+
+.menu li {
+	list-style-type: none;
+	display: inline;
+	margin-left: 15px;
+	font-size: 15px;
+	color: #34495E;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+}
+
+.search-container {
+	position: absolute;
+	top: 25%;
+	left: 30%;
+}
+
+.fa-search {
+	color: #DC7633;
+}
+
+input {
+	width: 500px;
+}
+
+button {
+	border: 1px solid #ffffff;
+}
+
+input[type=text] {
+	border: 2px solid #FAE5D3;
+	border-radius: 50px;
+	padding-left: 5px;
+}
+
+.topper {
+	position: relative;
+	background: url("../images/background-2.jpg");
+	background-size: cover;
+	height: 200px;
+	background-position: center;
+	opacity: 0.2;
+}
+
+.top-header {
+	position: absolute;
+	text-align: center;
+	color: black;
+	opacity: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.top-header h1 {
+	font-size: 50px;/*color: #34495E;*/
+	color: #E67E22;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+}
+
+.top-header a {
+	color: #E67E22;
+}
+
+.top-header a:hover {
+	color: #EB984E;
+	text-decoration: none;
+}
+
+.top-header h2 {
+	font-size: 35px;
+	color: #DC7633;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+}
+
+.rest-topper {
+	position: relative;
+	background: url("../images/resturantnew.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+}
+
+.rest-header {
+	position: absolute;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	bottom: -10px;
+	left: 0;
+	right: 0;
+}
+
+.rest-header h1 {
+	font-size: 25px;
+	background-color: black;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	padding: 10px;
+}
+
+.rest-header a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.fast-food-topper {
+	position: relative;
+	background: url("../images/set-menu.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+}
+
+.fast-food-header {
+	position: absolute;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	bottom: -10px;
+	left: 0;
+	right: 0;
+}
+
+.fast-food-header h1 {
+	font-size: 25px;
+	background-color: black;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	padding: 10px;
+}
+
+.fast-food-header a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.chinese-topper {
+	position: relative;
+	background: url("../images/chinese-3.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+}
+
+.chinese-header {
+	position: absolute;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	bottom: -10px;
+	left: 0;
+	right: 0;
+}
+
+.chinese-header h1 {
+	font-size: 25px;
+	color: #ffffff;
+	background-color: black;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	padding: 10px;
+}
+
+.chinese-header a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.homemade-topper {
+	position: relative;
+	background: url("../images/homemade2.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+}
+
+.homemade-header {
+	position: absolute;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	bottom: -10px;
+	left: 0;
+	right: 0;
+}
+
+.homemade-header h1 {
+	font-size: 25px;
+	color: #ffffff;
+	background-color: black;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	padding: 10px;
+}
+
+.homemade-header a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+.header {
+	font-size: 32px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+}
+
+.fast-food-para {
+	font-size: 18px;
+	line-height: 32px;
+	font-family: 'Raleway', sans-serif;
+	text-align: justify;
+}
+
+.burger-para {
+	font-size: 18px;
+	line-height: 32px;
+	font-family: 'Raleway', sans-serif;
+	text-align: justify;
+}
+
+.fuchka-para {
+	font-size: 18px;
+	line-height: 32px;
+	font-family: 'Raleway', sans-serif;
+	text-align: justify;
+}
+
+.biryani-para {
+	font-size: 18px;
+	line-height: 32px;
+	font-family: 'Raleway', sans-serif;
+	text-align: justify;
+}
+
+.resturant-para {
+	font-size: 18px;
+	line-height: 32px;
+	font-family: 'Raleway', sans-serif;
+	text-align: justify;
+}
+
+.shawarmas-para {
+	font-size: 18px;
+	line-height: 32px;
+	font-family: 'Raleway', sans-serif;
+	text-align: justify;
+}
+
+.container-fluid-footer {
+	background-color: #000000;
+	margin-top: 20px;
+}
+
+.container-fluid-footer .row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.footer-list-1 {
+	margin-top: 10px;
+}
+
+.footer-list-1 li {
+	list-style-type: none;
+	font-size: 18px;/*color: #34495E;*/
+	color: #ffffff;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+}
+
+.footer-list-2 {
+	margin-top: 10px;
+}
+
+.footer-list-2 li {
+	list-style-type: none;
+	font-size: 18px;/*color: #34495E;*/
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.footer-list-1 a {
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.footer-list-2 a {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.fa-instagram {
+	color: #C70039;
+}
+
+.fa-linkedin {
+	color: #ffffff;
+}
+
+.fa-facebook {
+	color: #1877f2;
+}
+
+/*About_us_Page_CSS*/
+.about-us-head {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.about-us-head h1 {
+	font-weight: bold;
+}
+
+.image img {
+	margin-top: 20px;
+	width: 70%;
+}
+
+.improve_head h4 {
+	padding: 0px 200px;
+	line-height: 1.5;
+}
+
+.video {
+	margin: auto;
+	width: 50%;
+}
+
+.video h1 {
+	text-align: center;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 20px;
+	color: #E67E22;
+}
+
+.part-1 h1 {
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+}
+
+.para {
+	font-size: 18px;
+	text-align: justify;
+	font-family: 'Raleway', sans-serif;
+}
+
+.part-1-image {
+	margin-top: 20px;
+}
+
+.caption {
+	text-align: center;
+	font-size: 20px;
+	margin-top: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+}
+
+/*Privacy*/
+.privacy {
+	background-color: #F9E79F;
+	padding: 15px;
+}
+
+.privacy h2 {
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 0px;
+}
+
+.privacy p,
+li {
+	text-align: justify;
+	color: #000000;
+}
+
+/*Terms*/
+.terms {
+	background-color: #F9E79F;
+	padding: 15px;
+}
+
+.terms h2 {
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 0px;
+	0
+}
+
+.terms p {
+	text-align: justify;
+	color: #000000;
+}
+
+/*Security*/
+.security {
+	background-color: #F9E79F;
+	padding: 15px;
+}
+
+.security h2 {
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 0px;
+}
+
+.security p {
+	text-align: justify;
+	color: #000000;
+}
+
+.security-image img {
+	width: 90%;
+}
+
+/*Resturant List*/
+.rest-1 {
+	background: url("../images/fastfood/IBIZA - Crisp & Crush.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+}
+.rest-title {
+	background-color: #F2F4F4;
+	padding: 10px;
+}
+.rest-title h4{
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+}
+.rest-2 {
+	background: url("../images/fastfood/pizza gravity.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+}
+.rest-3 {
+	background: url("../images/fastfood/Sausly'sFoods.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+}
+.rest-4 {
+	background: url("../images/fastfood/Burger .jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-5 {
+	background: url("../images/fastfood/Rock N Roll - Banani.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+
+}
+.rest-6 {
+	background: url("../images/fastfood/The Secret Garden.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-7 {
+	background: url("../images/fastfood/Street 11.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-8 {
+	background: url("../images/fastfood/Candy floss.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-9 {
+	background: url("../images/fastfood/BAO BOYS.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-10 {
+	background: url("../images/homemade/Authentic recipe.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-11 {
+	background: url("../images/homemade/Gosh Vat Home Kitchen.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-12 {
+	background: url("../images/homemade/China express.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-13 {
+	background: url("../images/homemade/Dish koi mega kitchen.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-14 {
+	background: url("../images/homemade/Fahim vorta ghor.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-15 {
+	background: url("../images/homemade/polau ghor.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-16 {
+	background: url("../images/homemade/ghorwa kitchen.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-17 {
+	background: url("../images/homemade/Thai express.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-18 {
+	background: url("../images/homemade/Dhakaiya pakki.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-19 {
+	background: url("../images/chinese/Floor 6 -Reloaded.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-20 {
+	background: url("../images/chinese/Red Chili Restaurant.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-21 {
+	background: url("../images/chinese/Dragons at Pearl.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-22 {
+	background: url("../images/chinese/Bismillah Food Corner - Savar.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-23 {
+	background: url("../images/chinese/Orchid resturant.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-24 {
+	background: url("../images/chinese/Marshmallow.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-25 {
+	background: url("../images/chinese/Snacks Zone.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-26 {
+	background: url("../images/chinese/Diganto Thai Chinese & Kabab.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+.rest-27 {
+	background: url("../images/chinese/Feruza's kitchen.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	margin-top: 30px;
+}
+
+
