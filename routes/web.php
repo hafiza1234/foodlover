@@ -15,8 +15,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
+
+Route::get('restaurants', function () {
+    return view('restaurant');
+})->name('restaurants');
+
+Route::get('chinese', function () {
+    return view('restaurant');
+})->name('chinese');
+
+Route::get('restaurants', function () {
+    return view('restaurant');
+})->name('restaurants');
+
+Route::get('restaurants/{id}', function () {
+    return view('restaurant');
+})->name('restaurants.show');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
