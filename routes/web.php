@@ -17,42 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/foods', function() {
- 	return view('homepage');
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('resturants',function() {
-	return view('resturant');
-});
-
-Route::get('fastfoods',function() {
-	return view('fastfood');
-});
-
-Route::get('chineses',function() {
-	return view('chinese');
-});
-
-Route::get('homemades',function() {
-	return view('homemade');
-});
-
-Route::get('contactus',function() {
-	return view('contactus');
-});
-
-Route::get('privacy',function() {
-	return view('privacy');
-});
-
-Route::get('security',function() {
-	return view('security');
-});
-
-Route::get('Terms',function() {
-	return view('Terms');
-});
-
-Route::get('index',function() {
-	return view('index');
-});
+require __DIR__.'/auth.php';
