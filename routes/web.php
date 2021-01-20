@@ -23,12 +23,12 @@ Route::get('restaurants', function () {
 })->name('restaurants');
 
 Route::get('chinese', function () {
-    return view('restaurant');
+    return view('chinese');
 })->name('chinese');
 
-Route::get('restaurants', function () {
-    return view('restaurant');
-})->name('restaurants');
+Route::get('fast-food', function () {
+    return view('fastfood');
+})->name('fast_food');
 
 Route::get('restaurants/{id}', function () {
     return view('restaurant');

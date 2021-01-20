@@ -17,7 +17,9 @@ class CreateRatingTable extends Migration
             $table->id();
             $table->integer('customer_id');
             $table->integer('score');
+            $table->text('description')->nullable();
             $table->integer('menu_id');
+            $table->integer('order_id');
             $table->timestamps();
         });
     }
