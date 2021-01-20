@@ -20,5 +20,9 @@ class Menu extends Model
         'price',
         'image_ur'
     ];
-    
+
+    public function food()
+    {
+        return $this->belongsTo(Food::class, 'food_id', 'id');
+    }
 }
