@@ -55,8 +55,34 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('admin/menus/{id}', [MenuController::class, 'update']);
 
     Route::get('admin/foods', [FoodController::class, 'index']);
+    Route::get('admin/foods/create', [FoodController::class, 'create']);
+    Route::post('admin/foods/save', [MenuController::class, 'store']);
+    Route::get('admin/foods/{id}/edit', [MenuController::class, 'edit']);
+    Route::post('admin/foods/{id}', [MenuController::class, 'update']);
+
     Route::get('admin/orders', [OrderController::class, 'index']);
+    Route::get('admin/orders/create', [OrderController::class, 'create']);
+    Route::post('admin/orders/save', [OrderController::class, 'store']);
+    Route::get('admin/orders/{id}/edit', [OrderController::class, 'edit']);
+    Route::post('admin/orders/{id}', [OrderController::class, 'update']);
+
+
     Route::get('admin/payments', [PaymentController::class, 'index']);
+    Route::get('admin/payments/create', [PaymentController::class, 'create']);
+    Route::post('admin/payments/save', [PaymentController::class, 'store']);
+    Route::get('admin/payments/{id}/edit', [PaymentController::class, 'edit']);
+    Route::post('admin/payments/{id}', [PaymentController::class, 'update']);
+
     Route::get('admin/ratings', [RatingController::class, 'index']);
+    Route::get('admin/ratings/create', [RatingController::class, 'create']);
+    Route::post('admin/ratings/save', [RatingController::class, 'store']);
+    Route::get('admin/ratings/{id}/edit', [RatingController::class, 'edit']);
+    Route::post('admin/ratings/{id}', [RatingController::class, 'update']);
+
     Route::get('admin/order_details', [OrderDetailController::class, 'index']);
+    Route::get('admin/order_details/create', [OrderDetailController::class, 'create']);
+    Route::post('admin/order_details', [OrderDetailController::class, 'store']);
+    Route::get('admin/order_details/{id}/edit', [OrderDetailController::class, 'edit']);
+    Route::post('admin/order_details/{id}', [OrderDetailController::class, 'update']);
+
 });
