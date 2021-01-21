@@ -1,6 +1,12 @@
 <?php
 
+use App\Http\Controllers\Admin\FoodController;
 use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\PaymentController;
+use App\Http\Controllers\Admin\RatingController;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\OrderDetailController;
+use App\Models\Food;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,4 +48,9 @@ require __DIR__.'/auth.php';
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('menus', [MenuController::class, 'index']);
+    Route::get('foods', [FoodController::class, 'index']);
+    Route::get('orders', [OrderController::class, 'index']);
+    Route::get('payments', [PaymentController::class, 'index']);
+    Route::get('ratings', [RatingController::class, 'index']);
+    Route::get('order_details', [OrderDetailController::class, 'index']);
 });
