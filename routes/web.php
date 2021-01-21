@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\RatingController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\OrderDetailController;
 use App\Models\Food;
+use App\Models\Menu;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,6 +49,11 @@ require __DIR__.'/auth.php';
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/menus', [MenuController::class, 'index']);
+    Route::get('admin/menus/create', [MenuController::class, 'create']);
+    Route::post('admin/menus/save', [MenuController::class, 'store']);
+    Route::get('admin/menus/{id}/edit', [MenuController::class, 'edit']);
+    Route::post('admin/menus/{id}', [MenuController::class, 'update']);
+
     Route::get('admin/foods', [FoodController::class, 'index']);
     Route::get('admin/orders', [OrderController::class, 'index']);
     Route::get('admin/payments', [PaymentController::class, 'index']);

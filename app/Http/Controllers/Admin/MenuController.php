@@ -5,36 +5,42 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Menu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MenuController extends Controller
 {
     public function index()
     {
-        return 'Bokul';
+        $menuList = Menu::get();
+
+        return view('admin.menus.index', ['menuList' => $menuList]);
     }
 
     public function create()
     {
-        return view('admin.menu.create');
+        return view('admin.menus.create');
     }
 
     public function store(Request $request)
     {
-        $menu = Menu::create($request->all());
+        $data = $request->all();
+        $data['vendor_id'] = Auth::user()->id;
+        
+        $menu = Menu::create($data);
 
         return redirect('admin/menus');
     }
 
     public function edit($id)
     {
-        $menu = Menu::find($id);
+        $menu = Menu::findOrFail($id);
 
-        return view('admin.menu.edit');
+        return view('admin.menus.edit', ['menu' => $menu]);
     }
 
     public function update($id, Request $request)
     {
-        $menu = Menu::find($id);
+        $menu = Menu::findOrFail($id);
 
         $menu->update($request->all());
 
