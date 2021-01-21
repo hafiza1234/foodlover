@@ -19,7 +19,7 @@ class CreatePaymentTable extends Migration
             $table->double('amount');
             $table->string('trn_id')->nullable();
             $table->string('method')->nullable();
-            $table->timestamp('date');
+            $table->timestamp('paid_at')->nullable();
             $table->timestamps();
         });
     }

@@ -16,6 +16,6 @@ class Payment extends Model
         'amount',
         'trn_id',
         'method',
-        'date'
+        'paid_at'
     ];
 }
