@@ -46,11 +46,11 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
-    Route::get('menus', [MenuController::class, 'index']);
-    Route::get('foods', [FoodController::class, 'index']);
-    Route::get('orders', [OrderController::class, 'index']);
-    Route::get('payments', [PaymentController::class, 'index']);
-    Route::get('ratings', [RatingController::class, 'index']);
-    Route::get('order_details', [OrderDetailController::class, 'index']);
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('admin/menus', [MenuController::class, 'index']);
+    Route::get('admin/foods', [FoodController::class, 'index']);
+    Route::get('admin/orders', [OrderController::class, 'index']);
+    Route::get('admin/payments', [PaymentController::class, 'index']);
+    Route::get('admin/ratings', [RatingController::class, 'index']);
+    Route::get('admin/order_details', [OrderDetailController::class, 'index']);
 });
