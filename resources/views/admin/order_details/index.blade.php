@@ -14,7 +14,6 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Image</th>
                                 <th>Name</th>
                                 <th>Type</th>
                                 <th>Price</th>
@@ -26,10 +25,7 @@
                             @foreach($menuList as $key => $menu)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td>
-                                    <img src="{{ url('storage/' . $menu->image_url ) }}" width="30" >
-                                </td>
-                                <td>{{ $menu->name }}</td>
+                                <td> {{ $menu->name }}</td>
                                 <td> {{ $menu->type }}</td>
                                 <td> {{ $menu->price }}</td>
                                 <td> {{ $menu->description }}</td>

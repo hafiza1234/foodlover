@@ -1,9 +1,9 @@
-<form action="{{ isset($menu) ? url('admin/menus/' . $menu->id) : url('admin/menus/save') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ isset($order) ? url('admin/orders/' . $order->id) : url('admin/orders/save') }}" method="POST">
     @csrf
 
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input required type="text" class="form-control" name="name" value="{{ isset($menu) ? $menu->name : '' }}">
+        <input required type="text" class="form-control" name="name" value="{{ isset($order) ? $oder->name : '' }}">
     </div>
 
     <div class="mb-3">
@@ -23,7 +23,7 @@
 
     <div class="mb-3">
         <label for="image" class="form-label">Select Image</label>
-        <input class="form-control" name="image" type="file" id="image" accept="image/*">
+        <input class="form-control" type="file" id="image">
     </div>
 
     <div class="mb-3">

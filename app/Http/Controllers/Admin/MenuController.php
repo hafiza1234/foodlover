@@ -25,6 +25,11 @@ class MenuController extends Controller
     {
         $data = $request->all();
         $data['vendor_id'] = Auth::user()->id;
+
+        if ($request->hasFile('image')) {
+            $path = $request->image->store('menus', 'public');
+            $data['image_url'] = $path;
+        }
         
         $menu = Menu::create($data);
 
@@ -41,8 +46,14 @@ class MenuController extends Controller
     public function update($id, Request $request)
     {
         $menu = Menu::findOrFail($id);
+        $data = $request->all();
 
-        $menu->update($request->all());
+        if ($request->hasFile('image')) {
+            $path = $request->image->store('menus', 'public');
+            $data['image_url'] = $path;
+        }
+        
+        $menu->update($data);
 
         return redirect('admin/menus');
     }
