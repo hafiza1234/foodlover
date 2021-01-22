@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\RatingController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\OrderDetailController;
+use App\Http\Controllers\HomeController;
 use App\Models\Food;
 use App\Models\Menu;
 use Illuminate\Support\Facades\Route;
@@ -21,9 +22,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('restaurants', function () {
@@ -84,5 +83,4 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('admin/order_details', [OrderDetailController::class, 'store']);
     Route::get('admin/order_details/{id}/edit', [OrderDetailController::class, 'edit']);
     Route::post('admin/order_details/{id}', [OrderDetailController::class, 'update']);
-
 });

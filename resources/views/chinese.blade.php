@@ -1,5 +1,5 @@
 <x-app-layout>
-	<x-slot name="py">1</x-slot>
+	<x-slot name="py">2</x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
 			Chinese 

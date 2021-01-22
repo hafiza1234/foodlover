@@ -8,24 +8,24 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active" data-interval='3000'>
-                <img src="{{ asset("images/3-dragons-at-pearl (6).jpg") }}" class="d-block w-100" style="max-height: 300px;" alt="...">
+                <img src="{{ asset('images/chinese/1.jpg') }}" class="d-block w-100" style="max-height: 350px;" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  <h3>Chinese</h3>
+                  <p>Chinese food staples such as rice, soy sauce, noodles, tea, chili oil and tofu, and utensils such as chopsticks and the wok, can now be found worldwide.</p>
                 </div>
               </div>
               <div class="carousel-item" data-interval='3000'>
-                <img  src="{{ asset("images/3-dragons-at-pearl (6).jpg") }}" class="d-block w-100" style="max-height: 300px;" alt="...">
+                <img  src="{{ asset("images/fastfood/1.jpg") }}" class="d-block w-100" style="max-height: 350px;" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Second slide label</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h3>Fast Bood</h3>
+                  <p>Fast food refers to food that can be prepared and served quickly..</p>
                 </div>
               </div>
               <div class="carousel-item" data-interval='3000'>
-                <img  src="{{ asset("images/3-dragons-at-pearl (6).jpg") }}" class="d-block w-100" style="max-height: 300px;" alt="...">
+                <img  src="{{ asset("images/homemade/1.jpg") }}" class="d-block w-100" style="max-height: 350px;" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Third slide label</h3>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  <h3>Homemade Food</h3>
+                  <p>Eating homemade foods is usually much cheaper than eating at a restaurant or buying processed foods from the market. </p>
                 </div>
               </div>
             </div>
@@ -41,20 +41,30 @@
     </x-slot>
 
     <div class="container ">
+      @foreach($menuList->groupBy('type') as $group  => $itemList)
+        {{-- <header class="bg-white shadow"> --}}
+            <h1 class="max-w-7xl mx-auto pt-3 pb-2 mt-4 pl-1">
+                <span class="border-bottom border-warning"> {{ $group ?? '' }} </span>
+            </h1>
+        {{-- </header> --}}
         <div class="row">
-            @for($i = 0; $i < 9; $i++)
-            <div class="col-md-4 mt-4">
+          
+          @foreach($itemList as $item)
+            <div class="col-md-4 mt-2">
                 <div class="card">
-                    <img src="{{ asset("images/3-dragons-at-pearl (6).jpg") }}" class="card-img-top" alt="...">
+                    <img src="{{ asset($item->image_url ? 'storage/' . $item->image_url : 'images/default-food.jpg') }}" class="card-img-top" alt="..." style="max-height: 240px">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="{{ route('restaurants.show', ['id' => $i]) }}" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">{{ $item->name ?? '' }}</h5>
+                        <p class="card-text">
+                          {{ $item->description ?? '' }}
+                        </p>
+                        <a href="{{ route('restaurants.show', ['id' => $item->id]) }}" class="btn btn-info mt-3">View Details</a>
                     </div>
                 </div>
             </div>
-            @endfor
+          @endforeach
         </div>
+       @endforeach
     </div>
 
 

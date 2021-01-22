@@ -22,15 +22,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($menuList as $key => $menu)
+                            @foreach($orderList as $key => $order)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td> {{ $menu->name }}</td>
-                                <td> {{ $menu->type }}</td>
-                                <td> {{ $menu->price }}</td>
-                                <td> {{ $menu->description }}</td>
+                                <td> {{ $order->name }}</td>
+                                <td> {{ $order->type }}</td>
+                                <td> {{ $order->price }}</td>
+                                <td> {{ $order->description }}</td>
                                 <td> 
-                                    <a href="{{url('admin/menus/' . $menu->id . '/edit')}}"> Edit </a>
+                                    <a href="{{url('admin/menus/' . $order->id . '/edit')}}"> Edit </a>
                                 </td>
                             </tr>
                             @endforeach

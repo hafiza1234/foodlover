@@ -14,23 +14,32 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Name</th>
-                                <th>Type</th>
-                                <th>Price</th>
-                                <th> Description</th>
-                                <th> Action </th>
+                                <th>ID</th>
+                                <th>Customer Name</th>
+                                <th>Customer Contact</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action </th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($menuList as $key => $menu)
+                            @foreach($orderList as $key => $order)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td> {{ $menu->name }}</td>
-                                <td> {{ $menu->type }}</td>
-                                <td> {{ $menu->price }}</td>
-                                <td> {{ $menu->description }}</td>
+                                <td>{{ $order->id }}</td>
+                                <td>{{ $order->customer->name ?? '' }}</td>
+                                <td>{{ $order->customer->mobile }}</td>
+                                <td>{{ $order->total_amount }}</td>
+                                <td>{{ $order->getStatus() }}</td>
                                 <td> 
-                                    <a href="{{url('admin/menus/' . $menu->id . '/edit')}}"> Edit </a>
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Change Status
+                                      </button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul>
                                 </td>
                             </tr>
                             @endforeach

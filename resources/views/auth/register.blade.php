@@ -26,6 +26,13 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+              <!-- Email Mobile -->
+              <div class="mt-4">
+                <x-label for="mobile" :value="__('Mobile')" />
+
+                <x-input id="mobile" class="block mt-1 w-full" type="text" max=11 name="mobile" :value="old('mobile')" required />
+            </div>
+
              <!-- Email Address -->
              <div class="mt-4">
                 <x-label for="type" :value="__('Account Type')" />

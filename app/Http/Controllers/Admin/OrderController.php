@@ -12,7 +12,7 @@ class OrderController extends Controller
     {
         $orderList = Order::get();
 
-        return view('admin.orders.index', ['menuList' => $menuList]);
+        return view('admin.orders.index', ['orderList' => $orderList]);
     }
 
     public function create()

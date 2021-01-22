@@ -5,11 +5,11 @@
         <label for="name" class="form-label">Name</label>
         <input required type="text" class="form-control" name="name" value="{{ isset($menu) ? $menu->name : '' }}">
     </div>
-
+{{-- 
     <div class="mb-3">
         <label for="fodd_id" class="form-label">Select Food</label>
         <input type="text" class="form-control" name="food_id" value="{{ isset($menu) ? $menu->food_id : ''}}">
-    </div>
+    </div> --}}
 
     <div class="mb-3">
         <label for="type" class="form-label">Menu Type</label>
@@ -28,7 +28,7 @@
 
     <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <textarea name="description" class="form-control">{{ isset($menu) ? $menu->food_id : ''}}</textarea>
+        <textarea name="description" class="form-control">{{ isset($menu) ? $menu->description : ''}}</textarea>
     </div>
     <input type="submit" value="Save Menu" class="btn btn-primary">
 </form>
