@@ -1,6 +1,7 @@
 ### Installation
 
 Run the following commands after cloning the repository.
+    
     git clone https://github.com/hafiza1234/foodlover.git
     cd foodlover
     cp .env.example  .env
