@@ -14,7 +14,9 @@ class AddMobileToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('mobile');
+            $table->string('mobile')->nullable();
+            $table->string('avatar')->nullable();
+            $table->text('description')->nullable();
         });
     }
 
@@ -26,7 +28,7 @@ class AddMobileToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('mobile');
+            $table->dropColumn(['mobile', 'avatar', 'description']);
         });
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Admin\FoodController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PaymentController;
@@ -45,6 +46,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('my-account', [AccountController::class, 'account'])->middleware('auth');
+Route::post('my-account', [AccountController::class, 'updateAccount'])->middleware('auth');
+
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/menus', [MenuController::class, 'index']);

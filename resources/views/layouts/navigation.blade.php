@@ -55,6 +55,10 @@
                         <x-dropdown-link :href="url('admin/menus')">
                             {{ __('Menu List') }}
                         </x-dropdown-link>
+
+                        <x-dropdown-link :href="url('my-account')">
+                            {{ __('My Account') }}
+                        </x-dropdown-link>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
