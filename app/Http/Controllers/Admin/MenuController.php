@@ -11,7 +11,9 @@ class MenuController extends Controller
 {
     public function index()
     {
-        $menuList = Menu::get();
+        $user = Auth::user();
+
+        $menuList = Menu::where('vendor_id', $user->id)->get();
 
         return view('admin.menus.index', ['menuList' => $menuList]);
     }

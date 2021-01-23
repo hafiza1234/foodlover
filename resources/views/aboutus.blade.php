@@ -35,7 +35,7 @@
 
 			</div>
         </div>
-        <div class ="container">
+        <div >
         	<div class ="row">
         		<div class ="col-sm-6">
         			<div class ="part-1">

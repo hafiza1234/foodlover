@@ -28,6 +28,12 @@
                     <x-nav-link :href="route('chinese')" :active="request()->routeIs('chinese')">
                         {{ __('Chinese') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('fast_food')" :active="request()->routeIs('fast_food')">
+                        {{ __('Fast Food') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('homemade')" :active="request()->routeIs('homemade')">
+                        {{ __('Home Made') }}
+                    </x-nav-link>
                 </div>
             </div>
 

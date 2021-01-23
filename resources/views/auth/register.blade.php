@@ -37,7 +37,7 @@
              <div class="mt-4">
                 <x-label for="type" :value="__('Account Type')" />
 
-                <select id="type" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full"  required>
+                <select id="type" name="type" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full"  required>
                     <option value="1"> Customer </option>
                     <option value="2"> Vendor </option>
                 </select>
@@ -63,8 +63,6 @@
             </div>
 
             <div class="flex items-center justify-start mt-4">
-                
-
                 <x-button class="">
                     {{ __('Register') }}
                 </x-button>

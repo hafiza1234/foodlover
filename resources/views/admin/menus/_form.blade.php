@@ -13,7 +13,7 @@
 
     <div class="mb-3">
         <label for="type" class="form-label">Menu Type</label>
-        <input type="text" class="form-control" name="type" value="{{ isset($menu) ? $menu->type : ''}}">
+        <input type="text" list="menu-type" class="form-control" name="type" value="{{ isset($menu) ? $menu->type : ''}}">
     </div>
 
     <div class="mb-3">
@@ -31,4 +31,12 @@
         <textarea name="description" class="form-control">{{ isset($menu) ? $menu->description : ''}}</textarea>
     </div>
     <input type="submit" value="Save Menu" class="btn btn-primary">
+    <a class="btn btn-danger" href="{{ url('admin/menus') }}"> Cancel </a>
+
 </form>
+
+<datalist id="menu-type">
+    <option value="Chinese">
+    <option value="Fast Food">
+    <option value="Home Made">
+</datalist>

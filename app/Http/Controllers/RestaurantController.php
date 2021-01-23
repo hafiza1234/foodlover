@@ -28,7 +28,7 @@ class RestaurantController extends Controller
             ->where('vendor_id', $id)
             ->get();
         
-        return view('restaurants-menu', [
+        return view('restaurant-menus', [
             'menuList' => $menuList,
             'vendor' => $vendor
         ]);

@@ -18,9 +18,9 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
         <link rel="stylesheet" href="/css/google-font.css">
         <link type="text/css" rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         {{-- <link type="text/css" rel="stylesheet" href="css/media.css"> --}}
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         
     </head>
     <body class="font-sans antialiased">
@@ -37,7 +37,7 @@
             @show
 
             <!-- Page Content -->
-            <main>
+            <main class="container-fluid">
                 {{ $slot }}
             </main>
         </div>

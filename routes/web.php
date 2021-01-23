@@ -7,10 +7,9 @@ use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\RatingController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\OrderDetailController;
+use App\Http\Controllers\CustomerMenuController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RestaurantController;
-use App\Models\Food;
-use App\Models\Menu;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,17 +29,13 @@ Route::get('restaurants', [RestaurantController::class, 'index'])->name('restaur
 
 Route::get('restaurants/menus', [RestaurantController::class, 'menus'])->name('restaurants.menus');
 
-Route::get('chinese', function () {
-    return view('chinese');
-})->name('chinese');
+Route::get('menu-type/chinese', [CustomerMenuController::class, 'chinese'])->name('chinese');
+Route::get('menu-type/fast-food', [CustomerMenuController::class, 'fastFood'])->name('fast_food');
+Route::get('menu-type/homemade', [CustomerMenuController::class, 'homemade'])->name('homemade');
+Route::get('menu-type/homemade', [CustomerMenuController::class, 'homemade'])->name('homemade');
+Route::get('menu/{id}/details', [CustomerMenuController::class, 'details'])->name('menu.show');
 
-Route::get('fast-food', function () {
-    return view('fastfood');
-})->name('fast_food');
 
-Route::get('restaurants/{id}', function () {
-    return view('restaurant');
-})->name('restaurants.show');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

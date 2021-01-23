@@ -40,30 +40,18 @@
           </div>
     </x-slot>
 
-    <div class="container ">
-      @foreach($menuList->groupBy('type') as $group  => $itemList)
-        {{-- <header class="bg-white shadow"> --}}
-            <h1 class="max-w-7xl mx-auto pt-3 pb-2 mt-4 pl-1">
-                <span class="border-bottom border-warning"> {{ $group ?? '' }} </span>
-            </h1>
-        {{-- </header> --}}
-        <div class="row">
-          
-          @foreach($itemList as $item)
-            <div class="col-md-4 mt-2">
-                <div class="card">
-                    <img src="{{ asset($item->image_url ? 'storage/' . $item->image_url : 'images/default-food.jpg') }}" class="card-img-top" alt="..." style="max-height: 240px">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $item->name ?? '' }}</h5>
-                        <p class="card-text">
-                          {{ $item->description ?? '' }}
-                        </p>
-                        <a href="{{ route('restaurants.show', ['id' => $item->id]) }}" class="btn btn-info mt-3">View Details</a>
-                    </div>
-                </div>
-            </div>
-          @endforeach
-        </div>
-       @endforeach
-    </div>
+    @foreach($menuList->groupBy('type') as $group  => $itemList)
+      {{-- <header class="bg-white shadow"> --}}
+          <h3 class="max-w-7xl mx-auto pt-3 pb-2 mt-4 pl-1">
+              <span class="border-bottom border-warning"> {{ $group ?? '' }} </span>
+          </h3>
+      {{-- </header> --}}
+      <div class="row">
+        @foreach($itemList as $item)
+          <div class="col-md-4 mt-2">
+            <x-menu-item :item="$item"></x-menu-item>
+          </div>
+        @endforeach
+      </div>
+    @endforeach
 </x-app-layout>
