@@ -25,4 +25,9 @@ class Menu extends Model
     {
         return $this->belongsTo(Food::class, 'food_id', 'id');
     }
+
+    public function vendor()
+    {
+        return $this->belongsTo(User::class, 'vendor_id');
+    }
 }
