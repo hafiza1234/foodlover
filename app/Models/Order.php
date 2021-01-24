@@ -25,9 +25,11 @@ class Order extends Model
         return $this->hasMany(OrderDetail::class);
     }
 
-    public function getStatus()
+    public function getStatus($code = null)
     {
-        switch ($this->status) {
+        $code = $code ?: $this->status;
+        
+        switch ($code) {
             case 1:
                 return 'Pending';
             case 2:

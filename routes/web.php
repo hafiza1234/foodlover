@@ -72,6 +72,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/orders/create', [OrderController::class, 'create']);
     Route::post('admin/orders/save', [OrderController::class, 'store']);
     Route::get('admin/orders/{id}/edit', [OrderController::class, 'edit']);
+    Route::get('admin/orders/{id}/change-status', [OrderController::class, 'changeStatus'])->name('admin.order.change_status');
+    Route::get('admin/orders/{id}/details', [OrderController::class, 'show'])->name('admin.order.show');
     Route::post('admin/orders/{id}', [OrderController::class, 'update']);
 
 
