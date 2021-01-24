@@ -18,4 +18,9 @@ class OrderDetail extends Model
         'amount',
         'total_amount'
     ];
+
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class, 'menu_id');
+    }
 }

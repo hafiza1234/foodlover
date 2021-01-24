@@ -64,6 +64,9 @@
                             {{ __('Dashboard') }}
                         </x-dropdown-link>
 
+                        <x-dropdown-link :href="url('my-orders')">
+                            {{ __('My Orders') }}
+                        </x-dropdown-link>
                         <x-dropdown-link :href="url('admin/menus')">
                             {{ __('Menu List') }}
                         </x-dropdown-link>

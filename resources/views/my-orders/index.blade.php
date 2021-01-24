@@ -1,7 +1,7 @@
 <x-app-layout :py=1>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Order List List
+            Order List
         </h2>
     </x-slot>
 
