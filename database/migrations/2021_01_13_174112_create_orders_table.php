@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->integer('vendor_id');
             $table->timestamp('order_date');
             $table->double('total_amount');
+            $table->text('address')->nullable();
             $table->string('status')->nullable()->comment('pending', 'accept', 'prepare', 'on-delivery', 'delivered', 'cancel', 'reject');
             $table->timestamps();
         });

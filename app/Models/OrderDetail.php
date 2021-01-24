@@ -18,6 +18,4 @@ class OrderDetail extends Model
         'amount',
         'total_amount'
     ];
-
-
 }

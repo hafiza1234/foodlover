@@ -7,7 +7,9 @@ use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\RatingController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\OrderDetailController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CustomerMenuController;
+use App\Http\Controllers\CustomerOrderController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RestaurantController;
 use Illuminate\Support\Facades\Route;
@@ -44,7 +46,14 @@ require __DIR__.'/auth.php';
 
 Route::get('my-account', [AccountController::class, 'account'])->middleware('auth');
 Route::post('my-account', [AccountController::class, 'updateAccount'])->middleware('auth');
+Route::get('cart/{id}/add', [CartController::class, 'addToCart'])->middleware('auth')->name('cart.add');
+Route::get('cart/{id}/remove', [CartController::class, 'removeFromCart'])->middleware('auth')->name('cart.remove');
+Route::get('cart/details', [CartController::class, 'show'])->middleware('auth')->name('cart.show');
+Route::post('cart/order', [CartController::class, 'placeOrder'])->middleware('auth')->name('cart.order');
 
+Route::get('my-orders', [CustomerOrderController::class, 'index'])->middleware('auth');
+Route::get('my-orders/{id}', [CustomerMenuController::class, 'show'])->middleware('auth');
+Route::get('my-orders/{id}/change-status', [CustomerMenuController::class, 'changeStatus'])->middleware('auth');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/menus', [MenuController::class, 'index']);

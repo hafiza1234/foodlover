@@ -11,7 +11,7 @@
             <div class="card mb-3" >
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="{{ asset($menu->image_url ? 'storage/' . $menu->image_url : 'images/default-food.jpg') }}" class="card-img-top" alt="..." style="height: 240px">
+                    <img src="{{ asset($menu->image_url ? 'storage/' . $menu->image_url : 'images/default-food.jpg') }}" class="card-img-top" alt="..." style="height: 100%; max-height: 350px">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
@@ -19,8 +19,16 @@
                       <p class="card-text">{{ $menu->description }}</p>
                       <p class="card-text mb-0"><span class="text-muted">Price:</span> <strong>{{ $menu->price }} TK</strong></p>
                       <p class="card-text mt-1 mb-0"><span class="text-muted">Type: {{ $menu->type }}</span> </p>
-                      <p class="card-text mt-1"><span class="text-muted">Vendor: {{ $menu->vendor->name }}</span> </p>
-                      <a href="#" class="btn btn-warning">Add To Cart</a>
+                      <p class="card-text mt-1 mb-0"><span class="text-muted">Vendor: {{ $menu->vendor->name }}</span> </p>
+                      @if (! $menu->isAddedToCart())
+                      <form action="{{ route('cart.add', ['id' => $menu->id]) }}">
+                        <p class="card-text mt-1"><span class="text-mute">Qty: <input type="number" min=1 name='qty' class="p-0 w-10" value="1"></span> </p>
+                        <input type="submit" value="Add To Cart" class="btn btn-warning">
+                      </form>
+                      @else
+                        
+                        <a class="btn btn-danger mt-2" href="{{ route('cart.remove', ['id' => $menu->id]) }}">Remove from Cart</a>
+                      @endif
                     </div>
                   </div>
                 </div>
