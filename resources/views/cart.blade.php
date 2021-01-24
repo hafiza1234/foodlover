@@ -56,7 +56,7 @@
       <div class="col-md-4 mt-3">
         <div class="card">
           <div class="card-header">
-            <div>Summery</div>
+            <div>Summary</div>
           </div>
           <div class="card-body">
             <div class="row justify-content-center">
