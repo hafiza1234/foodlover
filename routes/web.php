@@ -52,8 +52,8 @@ Route::get('cart/details', [CartController::class, 'show'])->middleware('auth')-
 Route::post('cart/order', [CartController::class, 'placeOrder'])->middleware('auth')->name('cart.order');
 
 Route::get('my-orders', [CustomerOrderController::class, 'index'])->middleware('auth');
-Route::get('my-orders/{id}', [CustomerMenuController::class, 'show'])->middleware('auth');
-Route::get('my-orders/{id}/change-status', [CustomerMenuController::class, 'changeStatus'])->middleware('auth');
+Route::get('my-orders/{id}', [CustomerOrderController::class, 'show'])->middleware('auth')->name('my-order.show');
+Route::get('my-orders/{id}/cancel', [CustomerOrderController::class, 'cancel'])->middleware('auth')->name('my-order.cancel');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/menus', [MenuController::class, 'index']);
@@ -72,6 +72,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/orders/create', [OrderController::class, 'create']);
     Route::post('admin/orders/save', [OrderController::class, 'store']);
     Route::get('admin/orders/{id}/edit', [OrderController::class, 'edit']);
+    Route::get('admin/orders/{id}/change-status', [OrderController::class, 'changeStatus'])->name('admin.order.change_status');
+    Route::get('admin/orders/{id}/details', [OrderController::class, 'show'])->name('admin.order.show');
     Route::post('admin/orders/{id}', [OrderController::class, 'update']);
 
 

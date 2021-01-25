@@ -63,11 +63,18 @@
                         <x-dropdown-link :href="route('dashboard')">
                             {{ __('Dashboard') }}
                         </x-dropdown-link>
+                        @if(Auth::user()->type == 2)
+                            <x-dropdown-link :href="url('admin/orders')">
+                                {{ __('Customer Orders') }}
+                            </x-dropdown-link>
 
-                        <x-dropdown-link :href="url('admin/menus')">
-                            {{ __('Menu List') }}
+                            <x-dropdown-link :href="url('admin/menus')">
+                                {{ __('Menu List') }}
+                            </x-dropdown-link>
+                        @endif
+                        <x-dropdown-link :href="url('my-orders')">
+                            {{ __('My Orders') }}
                         </x-dropdown-link>
-
                         <x-dropdown-link :href="url('my-account')">
                             {{ __('My Account') }}
                         </x-dropdown-link>

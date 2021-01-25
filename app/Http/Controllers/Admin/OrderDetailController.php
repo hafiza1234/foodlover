@@ -33,7 +33,7 @@ class OrderDetailController extends Controller
     {
         $order_detail = OrderDetail::findOrFail($id);
 
-        return view('admin.order_details.edit', ['order_details' => $order_details);
+        return view('admin.order_details.edit', ['order_details' => $order_details]);
     }
 
     public function update($id, Request $request)
@@ -54,4 +54,3 @@ class OrderDetailController extends Controller
         return redirect('admin/order_details');
     }
 }
-

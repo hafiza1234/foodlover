@@ -20,12 +20,12 @@
                       <p class="card-text mb-0"><span class="text-muted">Price:</span> <strong>{{ $menu->price }} TK</strong></p>
                       <p class="card-text mt-1 mb-0"><span class="text-muted">Type: {{ $menu->type }}</span> </p>
                       <p class="card-text mt-1 mb-0"><span class="text-muted">Vendor: {{ $menu->vendor->name }}</span> </p>
-                      @if (! $menu->isAddedToCart())
+                      @if ($menu->canBeAddedToCart())
                       <form action="{{ route('cart.add', ['id' => $menu->id]) }}">
                         <p class="card-text mt-1"><span class="text-mute">Qty: <input type="number" min=1 name='qty' class="p-0 w-10" value="1"></span> </p>
                         <input type="submit" value="Add To Cart" class="btn btn-warning">
                       </form>
-                      @else
+                      @elseif($menu->isAddedToCart())
                         
                         <a class="btn btn-danger mt-2" href="{{ route('cart.remove', ['id' => $menu->id]) }}">Remove from Cart</a>
                       @endif

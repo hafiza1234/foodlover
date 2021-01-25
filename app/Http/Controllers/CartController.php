@@ -50,6 +50,10 @@ class CartController extends Controller
     {
         $items = cache()->get('cart-' . Auth::id(), []);
 
+        if (! count($items)) {
+            return redirect('/');
+        }
+        
         $ids = Arr::pluck($items, 'menu_id');
 
         $menuList = Menu::whereIn('id', $ids)
@@ -65,6 +69,7 @@ class CartController extends Controller
             }
             return $item;
         });
+        
         return view('cart', ['menuList' => $menuList]);
     }
 
